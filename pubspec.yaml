@@ -1,0 +1,34 @@
+name: brain_mri_app
+description: Brain MRI classifier with Supabase auth + TFLite inference
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.5
+  provider: ^6.0.5
+  image_picker: ^0.8.7+4
+  tflite_flutter: ^0.11.0
+  tflite_flutter_helper: ^0.4.0
+  supabase_flutter: ^1.5.0
+  http: ^0.13.5
+  path_provider: ^2.0.14
+  uuid: ^3.0.7
+  shared_preferences: ^2.1.1
+  cached_network_image: ^3.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/model/brain_mri_4class_balanced_model.tflite
+    - assets/model/labels.txt
+    - assets/images/logo.png
